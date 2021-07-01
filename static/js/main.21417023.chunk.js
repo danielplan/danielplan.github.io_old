@@ -1,2 +1,0 @@
-(this["webpackJsonpdanielplan.github.io"]=this["webpackJsonpdanielplan.github.io"]||[]).push([[0],{9:function(e,t,i){"use strict";i.r(t);var n=i(1),s=i.n(n),a=i(3),c=i.n(a),r=i(0);function o(){return Object(r.jsx)("div",{className:"app-wrapper",children:"this will be my website someday"})}c.a.render(Object(r.jsx)(s.a.StrictMode,{children:Object(r.jsx)(o,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.21417023.chunk.js.map

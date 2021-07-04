@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: $black;
     font-size: 16px;
     background: $white;
@@ -29,17 +29,18 @@ body {
 
 .heading {
     font-weight: bold;
+    font-family: 'Poppins', 'Lato', sans-serif;
 
     &.xlarge {
         font-weight: normal;
-        font-size: 36px;
+        font-size: 28px;
 
         @include breakpoint(medium) {
-            font-size: 64px;
+            font-size: 58px;
         }
 
         @include breakpoint(large) {
-            font-size: 128px;
+            font-size: 96px;
         }
     }
 }

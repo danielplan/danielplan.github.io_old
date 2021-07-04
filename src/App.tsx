@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from 'pages/Home';
 import References from 'pages/References';
-//import Navigation from 'components/layout/Navigation';
+import Header from 'components/layout/Header';
 
 export default function App(): JSX.Element {
   return (
     <Router>
-      {/*<Navigation />*/}
+      <Header />
       <Switch>
         <Route path="/references" component={References} />
         <Route path="/" component={Home} />

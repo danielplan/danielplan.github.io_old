@@ -10,7 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
     color: $black;
     font-size: 16px;
-    background: $white;
+    background: $off-white;
 }
 
 .content-container {
@@ -23,20 +23,33 @@ body {
     color: $primary;
 }
 
+.text-secondary {
+    color: $secondary;
+}
+
 .text-uppercase {
     text-transform: uppercase;
+}
+
+p {
+    line-height: 1.8;
+
+    &.lead {
+        font-size: 18px;
+    }
 }
 
 .heading {
     font-weight: bold;
     font-family: 'Poppins', 'Lato', sans-serif;
+    line-height: 1.4;
 
     &.xlarge {
         font-weight: normal;
-        font-size: 28px;
+        font-size: 36px;
 
         @include breakpoint(medium) {
-            font-size: 58px;
+            font-size: 68px;
         }
 
         @include breakpoint(large) {
@@ -45,30 +58,24 @@ body {
     }
 }
 
-@for $i from 0 to $columns {
-    .col-#{$i} {
-        width: 100% / $columns * $i;
-        padding: $gutter / 2;
-    }
 
-    @include breakpoint(medium) {
-        .col-md-#{$i} {
-            width: 100% / $columns * $i;
-            padding: $gutter / 2;
-        }
-    }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-    @include breakpoint(large) {
-        .col-lg-#{$i} {
-            width: 100% / $columns * $i;
-            padding: $gutter / 2;
-        }
-    }
+.column {
+    padding: 0 $gutter / 2;
+}
 
-    @include breakpoint(xlarge) {
-        .col-xl-#{$i} {
-            width: 100% / $columns * $i;
-            padding: $gutter / 2;
+@each $bp,
+$i in $breakpoints {
+    @include breakpoint($bp) {
+        @for $i from 1 through $columns {
+            .column.#{$bp}-#{$i} {
+                width: $i * 100% / $columns;
+            }
         }
     }
 }

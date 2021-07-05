@@ -9,7 +9,6 @@
 body {
     font-family: 'Lato', sans-serif;
     color: $black;
-    font-size: 16px;
     background: $off-white;
 }
 
@@ -31,6 +30,11 @@ body {
     text-transform: uppercase;
 }
 
+a {
+    text-decoration: none;
+    color: $primary;
+}
+
 p {
     line-height: 1.8;
 
@@ -43,6 +47,11 @@ p {
     font-weight: bold;
     font-family: 'Poppins', 'Lato', sans-serif;
     line-height: 1.4;
+    
+    &.large {
+        font-size: 48px;
+        color: $primary;
+    }
 
     &.xlarge {
         font-weight: normal;
@@ -57,7 +66,6 @@ p {
         }
     }
 }
-
 
 .row {
     display: flex;

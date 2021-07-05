@@ -2,19 +2,23 @@
 $primary: #FF4F17;
 $secondary: #7D17FF;
 $black: #1B1226;
-$off-white: #FAF8FD;
-$lightgray: #F7F7F9;
+$white: #FEFEFE;
+$off-white: #FDFBFF;
+$lightgray: #F8F6FB;
 
 /*Grid*/
 $columns: 12;
 $gutter: 30px;
-$breakpoints: ('small': 480px,
+$breakpoints: (
+    'small': 480px,
     'medium': 860px,
     'large': 1400px,
-    'xlarge': 1640px);
+    'xlarge': 1640px
+);
 
 /*General*/
-$header-height: 110px;
+$header-height: 70px;
+$header-height-large: 90px;
 
 @function getFrom($map, $key) {
 

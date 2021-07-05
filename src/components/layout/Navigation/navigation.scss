@@ -1,0 +1,13 @@
+@import 'styles/settings';
+
+.site-navigation {
+    padding: 20px;
+    a {
+        color: $white;
+        padding: 20px;
+        text-transform: uppercase;
+        &.active {
+            font-weight: bold;
+        }
+    }
+}

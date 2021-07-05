@@ -1,14 +1,43 @@
 @import 'styles/settings.scss';
 
 .site-header {
-    height: $header-height;
     position: fixed;
     width: 100%;
     left: 0;
     top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: $header-height;
+
+    @include breakpoint(large) {
+        height: $header-height-large;
+    }
+
+    &:before {
+        content: ' ';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background: $primary;
+        z-index: -1;
+    }
+
+    .logo-container {
+        height: 100%;
+    }
 
     .logo {
-        padding: 20px;
         height: 100%;
+        padding: 10px;
+        background: $off-white;
+
+        @include breakpoint(large) {
+            padding: 15px;
+
+        }
     }
 }

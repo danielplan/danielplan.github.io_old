@@ -1,6 +1,7 @@
 import './home.scss';
 import Page from 'components/layout/Page';
 import Logo from 'components/svg/Logo';
+import Heading from 'components/ui/Heading';
 
 export default function Home(): JSX.Element {
     return (
@@ -22,6 +23,13 @@ export default function Home(): JSX.Element {
                         <p className="lead">
                             Hey I'm daniel plan, I am a 20-year old computer science student. This will be my website someday. Please stand by.
                         </p>
+                    </div>
+                </div>
+            </section>
+            <section className="section-wrapper content-container">
+                <div className="row">
+                    <div className="column">
+                        <Heading heading="My creations" />
                     </div>
                 </div>
             </section>

@@ -28,6 +28,19 @@
         width: 100%;
         background: $black;
     }
+    
+    .order-large-3 {
+        .creation-content {
+            &:before {
+                left: 100%;
+                transform: none;
+            }
+            &:after {
+                left: auto;
+                right: 100%;
+            }
+        } 
+    }
 
     .creation-content {
         background: $lightgray;

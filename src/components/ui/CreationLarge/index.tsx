@@ -5,15 +5,16 @@ import Tag from 'components/ui/Tag';
 import Button from 'components/ui/Button';
 
 interface Props {
-    creation: Creation
+    creation: Creation;
+    right?: boolean;
 }
 
-export default function CreationLarge({ creation }: Props): JSX.Element {
+export default function CreationLarge({ creation, right }: Props): JSX.Element {
     return (
         <div className="content-container">
             <div className="creation-item-large">
                 <div className="row bottom">
-                    <div className="column large-5">
+                    <div className={'column large-5 ' + (right ? 'order-large-3' : '')}>
                         <div className="creation-content">
                             {
                                 creation.tags.length > 0 && (

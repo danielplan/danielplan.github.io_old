@@ -41,6 +41,7 @@ export default function Home(): JSX.Element {
                     </div>
                 </div>
                 <CreationLarge creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
+                <CreationLarge right creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
             </section>
         </Page>
     )

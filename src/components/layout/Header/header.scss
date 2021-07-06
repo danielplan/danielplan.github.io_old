@@ -9,21 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     height: $header-height;
 
     @include breakpoint(large) {
         height: $header-height-large;
-    }
-
-    &:before {
-        content: ' ';
-        height: 100%;
-        position: absolute;
-        right: 0;
-        left: 0;
-        background: $primary;
-        z-index: -1;
     }
 
     .logo-container {

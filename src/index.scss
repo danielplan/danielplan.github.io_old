@@ -5,6 +5,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    transition: $transition;
+    transition-property: transform, opacity, color, background, box-shadow, stroke, visibility;
 }
 
 
@@ -12,6 +14,9 @@ body {
     font-size: 16px;
     color: $black;
     background: $off-white;
+    @include breakpoint(medium) {
+        font-size: 18px;
+    }
 }
 
 .content-container {
@@ -97,10 +102,15 @@ p {
 .row {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
     width: 100%;
+    &.bottom {
+        align-items: flex-end;
+    }
 }
 
 .column {
+    height: 100%;
     padding: 0 $gutter / 2;
 }
 

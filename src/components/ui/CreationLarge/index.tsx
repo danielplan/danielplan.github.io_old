@@ -10,26 +10,36 @@ interface Props {
 
 export default function CreationLarge({ creation }: Props): JSX.Element {
     return (
-        <div className="creation-item-large content-container">
-            <div className="row">
-                <div className="column large-5">
-                    <div className="tag-container">
-                        {
-                            creation.tags.map(t => (
-                                <Tag tag={t} />
-                            ))
-                        }
+        <div className="content-container">
+            <div className="creation-item-large">
+                <div className="row bottom">
+                    <div className="column large-5">
+                        <div className="creation-content">
+                            {
+                                creation.tags.length > 0 && (
+                                    <div className="tag-container">
+                                        {
+                                            creation.tags.map(t => (
+                                                <Tag tag={t} />
+                                            ))
+                                        }
+                                    </div>
+                                )
+                            }
+                            <Heading heading={creation.name} size="small" />
+                            <p>
+                                {creation.description}
+                            </p>
+                            <div className="button-container">
+                                <Button>
+                                    Learn more
+                                </Button>
+                            </div>
+                        </div>
                     </div>
-                    <Heading heading={creation.name} size="small" />
-                    <p>
-                        {creation.description}
-                    </p>
-                    <Button>
-                        Learn more
-                    </Button>
-                </div>
-                <div className="column large-7">
-
+                    <div className="column large-7">
+                        <div className="image"></div>
+                    </div>
                 </div>
             </div>
         </div>

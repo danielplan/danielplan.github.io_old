@@ -2,12 +2,20 @@
 
 .site-navigation {
     padding: 20px;
+
     a {
-        color: $white;
+        color: $black;
         padding: 20px;
         text-transform: uppercase;
+        font-weight: bold;
+
+        &:hover,
         &.active {
-            font-weight: bold;
+            color: $primary;
+        }
+
+        &:hover {
+            opacity: .75;
         }
     }
 }

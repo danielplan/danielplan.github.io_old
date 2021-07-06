@@ -1,3 +1,6 @@
 .heading-container {
     margin-bottom: 30px;
+    &.small {
+        margin-bottom: 10px;
+    }
 }

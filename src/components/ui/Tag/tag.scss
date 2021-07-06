@@ -1,0 +1,18 @@
+@import 'styles/settings';
+
+.tag {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 5px;
+
+    @each $i, $color in $themeColors {
+        &.theme-#{$i} {
+            background: rgba($color, 0.05);
+            color: $color;
+            &:hover {
+                background: rgba($color, 0.1);
+            }
+        }
+    }
+}

@@ -5,6 +5,12 @@ $black: #1B1226;
 $white: #FEFEFE;
 $off-white: #FDFBFF;
 $lightgray: #F8F6FB;
+$linear-gradient: linear-gradient(to bottom, #7D17FF 0%, #6607DE 100%);
+
+$themeColors: (
+    'purple': #7D17FF,
+    'blue': #3B70F8
+);
 
 /*Grid*/
 $columns: 12;

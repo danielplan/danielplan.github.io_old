@@ -2,7 +2,7 @@ import './heading.scss';
 
 interface Props {
     heading: string;
-    size?: 'large' | 'xlarge' | 'small';
+    size?: 'large' | 'xlarge' | 'small' | 'tiny';
 }
 
 export default function Heading({ heading, size }: Props): JSX.Element {

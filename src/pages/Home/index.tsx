@@ -28,8 +28,8 @@ export default function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="section-wrapper">
-                <div className="row content-container">
+            <section className="section-wrapper content-container">
+                <div className="row">
                     <div className="column large-6">
                         <Heading heading="My creations" size="xlarge" />
                         <p>
@@ -40,8 +40,6 @@ export default function Home(): JSX.Element {
                         </p>
                     </div>
                 </div>
-                <CreationLarge creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
-                <CreationLarge left creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
             </section>
         </Page>
     )

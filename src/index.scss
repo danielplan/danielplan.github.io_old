@@ -25,6 +25,7 @@ body {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 $gutter;
 }
 
 .text-primary {
@@ -52,55 +53,6 @@ p {
     }
 }
 
-.heading {
-    font-weight: bold;
-    font-family: $heading-font;
-    line-height: 1.4;
-
-    &.small {
-        font-size: 22px;
-
-        @include breakpoint(medium) {
-            font-size: 36px;
-        }
-    }
-
-
-    &.large {
-        color: $primary;
-        font-size: 24px;
-
-        @include breakpoint(medium) {
-            font-size: 36px;
-        }
-
-        @include breakpoint(large) {
-            font-size: 72px;
-        }
-    }
-
-    &.xlarge {
-        line-height: 1;
-    }
-
-    &.xlarge,
-    &.special {
-        font-size: 36px;
-        color: $primary;
-
-        @include breakpoint(medium) {
-            font-size: 68px;
-        }
-
-        @include breakpoint(large) {
-            font-size: 96px;
-        }
-    }
-
-    &.special {
-        font-weight: normal;
-    }
-}
 
 .order-large-1 {
     @include breakpoint(large) {
@@ -119,11 +71,12 @@ p {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    margin: -$gutter / 2;
 
     &.bottom {
         align-items: flex-end;
     }
-    
+
     &.center {
         justify-content: center;
     }
@@ -132,7 +85,7 @@ p {
 .column {
     height: 100%;
     width: 100%;
-    padding: 0 $gutter / 2;
+    padding: $gutter / 2;
 }
 
 @each $bp,

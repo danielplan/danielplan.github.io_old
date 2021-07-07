@@ -2,6 +2,23 @@
 
 .home-page {
 
+    .heading {
+        &.special {
+            font-size: 36px;
+            color: $primary;
+            font-family: $heading-font;
+            font-weight: normal;
+
+            @include breakpoint(medium) {
+                font-size: 68px;
+            }
+
+            @include breakpoint(large) {
+                font-size: 96px;
+            }
+        }
+    }
+
     .section-wrapper {
         margin: 60px auto;
 

@@ -1,0 +1,20 @@
+@import 'styles/settings.scss';
+
+.creation-item {
+    width: 100%;
+
+    .image {
+        padding-bottom: 56.5%;
+        background: $black;
+    }
+
+    .content {
+        background: $lightgray;
+        padding: 20px;
+        width: 100%;
+
+        .tag-container {
+            margin-bottom: 10px;
+        }
+    }
+}

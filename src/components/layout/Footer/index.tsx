@@ -5,7 +5,9 @@ export default function Footer(): JSX.Element {
     return (
         <footer>
             <Logo color="white" />
-            <span className="subtitle">created by <strong>daniel plan.</strong></span>
+            <div className="subtitle">
+                created by daniel plan, {new Date().getFullYear()}
+            </div>
         </footer>
     )
 }

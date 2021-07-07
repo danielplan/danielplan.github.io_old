@@ -24,7 +24,7 @@ export default function CreationLarge({ creation, left }: Props): JSX.Element {
                                     <div className="tag-container">
                                         {
                                             creation.tags.map(t => (
-                                                <Tag tag={t} />
+                                                <Tag tag={t} key={t.id} />
                                             ))
                                         }
                                     </div>

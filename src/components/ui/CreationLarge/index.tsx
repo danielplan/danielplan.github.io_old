@@ -6,15 +6,18 @@ import Button from 'components/ui/Button';
 
 interface Props {
     creation: Creation;
-    right?: boolean;
+    left?: boolean;
 }
 
-export default function CreationLarge({ creation, right }: Props): JSX.Element {
+export default function CreationLarge({ creation, left }: Props): JSX.Element {
     return (
         <div className="content-container">
             <div className="creation-item-large">
                 <div className="row bottom">
-                    <div className={'column large-5 ' + (right ? 'order-large-3' : '')}>
+                    <div className={'column medium-6 large-7 ' + (left ? 'order-large-3' : '')}>
+                        <div className="image"></div>
+                    </div>
+                    <div className="column medium-6 large-5">
                         <div className="creation-content">
                             {
                                 creation.tags.length > 0 && (
@@ -37,9 +40,6 @@ export default function CreationLarge({ creation, right }: Props): JSX.Element {
                                 </Button>
                             </div>
                         </div>
-                    </div>
-                    <div className="column large-7">
-                        <div className="image"></div>
                     </div>
                 </div>
             </div>

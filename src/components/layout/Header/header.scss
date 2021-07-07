@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     height: $header-height;
+    background: $off-white;
 
     @include breakpoint(large) {
         height: $header-height-large;
@@ -22,7 +23,6 @@
     .logo {
         height: 100%;
         padding: 10px;
-        background: $off-white;
 
         @include breakpoint(large) {
             padding: 15px;

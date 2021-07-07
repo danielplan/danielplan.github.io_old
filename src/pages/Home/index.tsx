@@ -20,10 +20,10 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
             <section className="section-wrapper content-container">
-                <div className="row">
-                    <div className="column medium-8 large-6">
+                <div className="row center">
+                    <div className="column large-8">
                         <p className="lead">
-                            Hey I'm daniel plan, I am a 20-year old computer science student. This will be my website someday. Please stand by.
+                            I’m a <strong>computer science student</strong> focused on web development and -design, as well as photography.
                         </p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
                     </div>
                 </div>
                 <CreationLarge creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
-                <CreationLarge right creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
+                <CreationLarge left creation={{ name: 'ryoko', description: 'test', tags: [Tag.DESIGN] }} />
             </section>
         </Page>
     )

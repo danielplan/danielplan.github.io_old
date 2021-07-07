@@ -1,5 +1,14 @@
 @import 'styles/settings.scss';
 
-.st0 {
-    fill: $black;
+.logo {
+    * {
+        fill: $black;
+    }
+
+    &.white {
+        * {
+            fill: $white;
+        }
+    }
+
 }

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: $body-font;
     transition: $transition;
     transition-property: transform, opacity, color, background, box-shadow, stroke, visibility;
 }
@@ -54,7 +54,7 @@ p {
 
 .heading {
     font-weight: bold;
-    font-family: 'Poppins', 'Lato', sans-serif;
+    font-family: $heading-font;
     line-height: 1.4;
 
     &.small {
@@ -123,10 +123,15 @@ p {
     &.bottom {
         align-items: flex-end;
     }
+    
+    &.center {
+        justify-content: center;
+    }
 }
 
 .column {
     height: 100%;
+    width: 100%;
     padding: 0 $gutter / 2;
 }
 

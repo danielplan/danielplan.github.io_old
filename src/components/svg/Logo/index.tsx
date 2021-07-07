@@ -1,8 +1,12 @@
 import './logo.scss';
 
-export default function Logo(): JSX.Element {
+interface Props {
+    color?: 'white';
+}
+
+export default function Logo({ color }: Props): JSX.Element {
     return (
-        <svg className="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg className={'logo ' + (color ?? '')} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 405.95 360.34">
             <g>
                 <path className="st0" d="M109.24,201.89c-0.06,0.06-0.11,0.12-0.17,0.18c0.3-0.31,0.61-0.6,0.92-0.9

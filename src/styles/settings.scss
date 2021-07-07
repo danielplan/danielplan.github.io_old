@@ -26,6 +26,8 @@ $breakpoints: (
 $header-height: 70px;
 $header-height-large: 90px;
 $transition: 300ms ease;
+$body-font: 'Montserrat', sans-serif;
+$heading-font: 'Poppins', $body-font;
 
 @function getFrom($map, $key) {
 

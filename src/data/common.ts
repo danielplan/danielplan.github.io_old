@@ -1,4 +1,5 @@
 export interface Creation {
+  id: number;
   name: string;
   description: string;
   tags: Tag[];

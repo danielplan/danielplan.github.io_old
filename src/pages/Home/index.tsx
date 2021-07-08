@@ -3,9 +3,11 @@ import Page from 'components/layout/Page';
 import Logo from 'components/svg/Logo';
 import Heading from 'components/ui/Heading';
 import CreationLarge from 'components/ui/CreationLarge';
-import { Tag } from 'data/common';
+import { useContext } from 'react';
+import { CreationsContext } from 'data/CreationsContext';
 
 export default function Home(): JSX.Element {
+    const allCreations = useContext(CreationsContext);
     return (
         <Page className="home-page">
             <section className="intro-section content-container">
@@ -45,7 +47,11 @@ export default function Home(): JSX.Element {
                         </div>
                     </div>
                 </div>
-                <CreationLarge left creation={{name: 'Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit viverra eget scelerisque nisl ut turpis porttitor....', tags: [Tag.DESIGN]}} />
+                {
+                    allCreations.slice(0, 3).map((creation, i) => (
+                        <CreationLarge left={i % 2 === 0} creation={creation} key={creation.id}/>
+                    ))
+                }
             </section>
         </Page>
     )

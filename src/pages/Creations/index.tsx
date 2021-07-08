@@ -1,9 +1,7 @@
 import './creations.scss';
 import Page from 'components/layout/Page';
 import Heading from 'components/ui/Heading'
-import CreationComponent from 'components/ui/Creation';
 import TextInput from 'components/ui/TextInput';
-import { Tag } from 'data/common';
 import { useState } from 'react';
 
 export default function Creations(): JSX.Element {
@@ -28,10 +26,6 @@ export default function Creations(): JSX.Element {
                 </section>
                 <section className="creation-list">
                     <div className="row">
-                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
-                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
-                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
-                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
                     </div>
                 </section>
             </div>

@@ -10,8 +10,13 @@
 
     .content {
         background: $lightgray;
+        width: calc(100% - 30px);
+        margin: -20px 0 0 15px;
         padding: 20px;
-        width: 100%;
+
+        @include breakpoint(large) {
+            padding: 25px;
+        }
 
         .tag-container {
             margin-bottom: 10px;

@@ -19,27 +19,33 @@ export default function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="section-wrapper content-container">
-                <div className="row center">
-                    <div className="column large-8">
-                        <p className="lead">
-                            I’m a <strong>computer science student</strong> focused on web development and -design, as well as photography.
-                        </p>
+
+            <section className="background-primary">
+                <div className="section-wrapper content-container me-section">
+                    <div className="row center">
+                        <div className="column large-8">
+                            <p className="lead">
+                                I’m a <strong>computer science student</strong> focused on web development and -design, as well as photography.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className="section-wrapper content-container">
-                <div className="row">
-                    <div className="column large-6">
-                        <Heading heading="My creations" size="xlarge" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sit viverra eget scelerisque nisl ut turpis porttitor.
-                            Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
-                            Cras sit tempus nec mauris.
-                        </p>
+            <section className="section-wrapper">
+                <div className="content-container">
+                    <div className="row">
+                        <div className="column large-6">
+                            <Heading heading="My creations" size="xlarge" />
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sit viverra eget scelerisque nisl ut turpis porttitor.
+                                Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
+                                Cras sit tempus nec mauris.
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <CreationLarge left creation={{name: 'Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit viverra eget scelerisque nisl ut turpis porttitor....', tags: [Tag.DESIGN]}} />
             </section>
         </Page>
     )

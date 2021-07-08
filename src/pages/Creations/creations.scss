@@ -2,6 +2,10 @@
 
 .creations-page {
     .heading-section {
-        margin: 200px 0;
+        margin: 150px 0 50px 0;
+
+        @include breakpoint(large) {
+            margin: 200px 0 100px 0;
+        }
     }
 }

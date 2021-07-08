@@ -22,6 +22,15 @@
         }
     }
 
+    @include breakpoint-down(medium) {
+        .column {
+            padding: 0;
+        }
+        .row {
+            margin: 0;
+        }
+    }
+
     .image {
         width: 100%;
         background: $black;
@@ -60,17 +69,12 @@
             padding: 100px 0;
 
             &:before {
-                content: ' ';
-                position: absolute;
-                bottom: 0;
-                height: 100%;
+                right: auto;
                 left: 100%;
-                z-index: -1;
-                width: 100vw;
-                background-color: $lightgray;
             }
 
-            &:after {
+            &:after,
+            &:before {
                 content: ' ';
                 position: absolute;
                 bottom: 0;

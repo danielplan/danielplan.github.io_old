@@ -13,7 +13,7 @@ export default function CreationLarge({ creation, left }: Props): JSX.Element {
     return (
         <div className="content-container">
             <div className="creation-item-large">
-                <div className="row bottom">
+                <div className="row middle">
                     <div className={'column medium-6 large-7 ' + (left ? 'order-large-3' : '')}>
                         <div className="image"></div>
                     </div>
@@ -32,7 +32,9 @@ export default function CreationLarge({ creation, left }: Props): JSX.Element {
                             }
                             <Heading heading={creation.name} size="small" />
                             <p>
-                                {creation.description}
+                                {creation.description.length > 100 ?
+                                    creation.description.substring(0, 100) + '...'
+                                    : creation.description}
                             </p>
                             <div className="button-container">
                                 <Button>

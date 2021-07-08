@@ -72,13 +72,21 @@
     }
 
     .lead {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.6;
 
         @include breakpoint(medium) {
-            font-size: 32px;
+            font-size: 28px;
         }
 
         text-align: center;
+    }
+
+    .me-section {
+        padding: 50px 0;
+
+        @include breakpoint(medium) {
+            padding: 100px 0;
+        }
     }
 }

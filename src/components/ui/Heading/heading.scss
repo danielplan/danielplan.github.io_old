@@ -4,7 +4,7 @@
     margin-bottom: 30px;
 
     &.small {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     &.tiny {
@@ -34,7 +34,6 @@
 
 
         &.large {
-            color: $primary;
             font-size: 24px;
 
             @include breakpoint(medium) {
@@ -49,7 +48,6 @@
         &.xlarge {
             line-height: 1;
             font-size: 36px;
-            color: $primary;
 
             @include breakpoint(medium) {
                 font-size: 68px;

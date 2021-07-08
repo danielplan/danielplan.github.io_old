@@ -13,7 +13,7 @@
 body {
     font-size: 16px;
     color: $black;
-    background: $off-white;
+    background: $white;
     overflow-x: hidden;
 
     @include breakpoint(medium) {
@@ -30,6 +30,11 @@ body {
 
 .text-primary {
     color: $primary;
+}
+
+.background-primary {
+    background: $primary;
+    color: $white;
 }
 
 .text-secondary {
@@ -79,6 +84,10 @@ p {
 
     &.center {
         justify-content: center;
+    }
+    
+    &.middle {
+        align-items: center;
     }
 }
 

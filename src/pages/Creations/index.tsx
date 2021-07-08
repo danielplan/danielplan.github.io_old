@@ -10,7 +10,7 @@ export default function Creations(): JSX.Element {
             <div className="content-container">
                 <section className="heading-section">
                     <div className="row">
-                        <div className="column large-8">
+                        <div className="column large-6">
                             <Heading heading="My creations" size="xlarge" />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -23,6 +23,9 @@ export default function Creations(): JSX.Element {
                 </section>
                 <section className="creation-list">
                     <div className="row">
+                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
+                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
+                        <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
                         <CreationComponent creation={{ name: 'name', description: 'Some desc', tags: [Tag.DEVELOPMENT] }} />
                     </div>
                 </section>

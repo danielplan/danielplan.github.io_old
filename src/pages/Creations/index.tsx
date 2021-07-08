@@ -2,9 +2,13 @@ import './creations.scss';
 import Page from 'components/layout/Page';
 import Heading from 'components/ui/Heading'
 import CreationComponent from 'components/ui/Creation';
+import TextInput from 'components/ui/TextInput';
 import { Tag } from 'data/common';
+import { useState } from 'react';
 
 export default function Creations(): JSX.Element {
+    const [searchTerm, setSearchTerm] = useState<string>('');
+
     return (
         <Page className="creations-page">
             <div className="content-container">
@@ -18,6 +22,7 @@ export default function Creations(): JSX.Element {
                                 Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
                                 Cras sit tempus nec mauris.
                             </p>
+                            <TextInput label="Search" name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
                         </div>
                     </div>
                 </section>

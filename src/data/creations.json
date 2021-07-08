@@ -1,0 +1,11 @@
+{
+    "creations": [
+        {
+            "name": "ryoko",
+            "description": "Some description",
+            "tags": [
+                1, 2
+            ]
+        }
+    ]
+}

@@ -5,16 +5,26 @@ export interface Creation {
   slug: string;
   tags: Tag[];
   thumbnail: string;
+  detailHeading?: string;
+  detailText?:string;
+  details?: CreationDetail[];
+}
+
+export interface CreationDetail {
+  icon: string;
+  title: string;
+  label?: string;
+  link?: string;
 }
 
 export enum Color {
   BLUE = "blue",
   PURPLE = "purple",
-  GREEN = "green"
+  ORANGE = "orange"
 }
 
 export class Tag {
-  static readonly PHOTOGRAPHY = new Tag(1, "Photography", Color.GREEN);
+  static readonly PHOTOGRAPHY = new Tag(1, "Photography", Color.ORANGE);
   static readonly DEVELOPMENT = new Tag(2, "Development", Color.BLUE);
   static readonly DESIGN = new Tag(3, "Design", Color.PURPLE);
   static readonly all = [Tag.PHOTOGRAPHY, Tag.DEVELOPMENT, Tag.DESIGN];

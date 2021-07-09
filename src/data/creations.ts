@@ -1,4 +1,4 @@
-import { Tag, Creation } from "./common";
+import { Tag, Creation, CreationDetail } from "./common";
 import creationList from "./creations.json";
 
 export function getAllCreations(): Creation[] {
@@ -11,6 +11,9 @@ function parseCreation(id: number, creation: {
   slug?: string;
   tags: number[];
   thumbnail: string;
+  detailHeading?: string;
+  detailText?:string;
+  details?: CreationDetail[];
 }): Creation {
   return {
     id,
@@ -18,7 +21,10 @@ function parseCreation(id: number, creation: {
     description: creation.description,
     slug: creation.slug ?? creation.name,
     tags: parseTags(creation.tags),
-    thumbnail: creation.thumbnail
+    thumbnail: creation.thumbnail,
+    detailHeading: creation.detailHeading,
+    detailText: creation.detailText,
+    details: creation.details
   };
 }
 

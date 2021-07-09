@@ -6,7 +6,15 @@
             "thumbnail": "ryoko.jpg",
             "tags": [
                 3, 2
-            ]
+            ],
+            "detailHeading": "Some heading",
+            "detailText": "asdfasdf",
+            "details": [{
+                "icon": "report_problem",
+                "title": "test",
+                "label": "asdf",
+                "link": "asdf"
+            }]
         },
         {
             "name": "Data Logging Solutions",

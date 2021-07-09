@@ -1,14 +1,30 @@
 import './creations.scss';
 import Page from 'components/layout/Page';
 import Heading from 'components/ui/Heading'
+import TagComponent from 'components/ui/Tag';
 import TextInput from 'components/ui/TextInput';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CreationComponent from 'components/ui/Creation';
 import useCreations from 'data/CreationsContext';
+import { Creation, Tag } from 'data/common';
 
 export default function Creations(): JSX.Element {
     const [searchTerm, setSearchTerm] = useState<string>('');
+    const [hiddenTags, setHiddenTags] = useState<number[]>([]);
     const allCreations = useCreations();
+    const [shownCreations, setShownCreations] = useState<Creation[]>([]);
+
+    useEffect(() => {
+        setShownCreations(allCreations);
+    }, [allCreations]);
+
+    useEffect(() => {
+        setShownCreations(allCreations.filter(c => c.name.indexOf(searchTerm) >= 0))
+    }, [searchTerm, allCreations]);
+
+    useEffect(() => {
+        setShownCreations(allCreations.filter(c => !c.tags.every(t => hiddenTags.some(ht => ht === t.id))))
+    }, [hiddenTags, allCreations]);
 
     return (
         <Page className="creations-page">
@@ -23,14 +39,35 @@ export default function Creations(): JSX.Element {
                                 Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
                                 Cras sit tempus nec mauris.
                             </p>
-                            <TextInput label="Search" name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
+                            <div className="filter-container">
+                                <TextInput label="Search" name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
+                                <div className="filter-tags">
+                                    {
+                                        Tag.all.map((tag, i) => (
+                                            <div
+                                                className={'filter-item' + (hiddenTags.indexOf(tag.id) >= 0 ? ' inactive' : '')}
+                                                onClick={() => setHiddenTags(
+                                                    state => {
+                                                        if (state.indexOf(tag.id) >= 0) {
+                                                            return state.filter(t => t !== tag.id);
+                                                        } else {
+                                                            return [...state, tag.id];
+                                                        }
+                                                    }
+                                                )}>
+                                                <TagComponent tag={tag} key={i} />
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section className="creation-list">
                     <div className="row">
                         {
-                            allCreations.map((creation, i) => (
+                            shownCreations.map((creation, i) => (
                                 <CreationComponent creation={creation} key={creation.id} />
                             ))
                         }

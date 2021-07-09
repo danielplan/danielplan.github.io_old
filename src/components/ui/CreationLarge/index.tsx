@@ -3,6 +3,7 @@ import { Creation } from 'data/common';
 import Heading from 'components/ui/Heading';
 import Tag from 'components/ui/Tag';
 import Button from 'components/ui/Button';
+import ShortText from 'components/ui/ShortText';
 
 interface Props {
     creation: Creation;
@@ -31,13 +32,9 @@ export default function CreationLarge({ creation, left }: Props): JSX.Element {
                                 )
                             }
                             <Heading heading={creation.name} size="small" />
-                            <p>
-                                {creation.description.length > 100 ?
-                                    creation.description.substring(0, 100) + '...'
-                                    : creation.description}
-                            </p>
+                            <ShortText text={creation.description} length={100} />
                             <div className="button-container">
-                                <Button>
+                                <Button route={'/creations/' + creation.slug}>
                                     Learn more
                                 </Button>
                             </div>

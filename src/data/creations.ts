@@ -8,12 +8,14 @@ export function getAllCreations(): Creation[] {
 function parseCreation(id: number, creation: {
   name: string;
   description: string;
+  slug?: string;
   tags: number[];
 }): Creation {
   return {
     id,
     name: creation.name,
     description: creation.description,
+    slug: creation.slug ?? creation.name,
     tags: parseTags(creation.tags),
   };
 }

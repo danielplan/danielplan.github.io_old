@@ -1,11 +1,27 @@
 @import 'styles/settings';
 
 .creations-page {
-    .heading-section {
-        margin: 150px 0 50px 0;
+    padding: 150px 0;
 
-        @include breakpoint(large) {
-            margin: 200px 0 100px 0;
+    .filter-container {
+        margin: 50px 0;
+    }
+
+    .filter-tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+
+        .filter-item {
+            margin: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+
+            &.inactive {
+                opacity: 0.75;
+                transform: scale(.9);
+            }
         }
     }
 }

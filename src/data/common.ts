@@ -2,6 +2,7 @@ export interface Creation {
   id: number;
   name: string;
   description: string;
+  slug: string;
   tags: Tag[];
 }
 
@@ -14,7 +15,7 @@ export class Tag {
   static readonly PHOTOGRAPHY = new Tag(1, "Photography", Color.BLUE);
   static readonly DEVELOPMENT = new Tag(2, "Development", Color.PURPLE);
   static readonly DESIGN = new Tag(3, "Design", Color.BLUE);
-  private static readonly allTags = [Tag.PHOTOGRAPHY, Tag.DEVELOPMENT, Tag.DESIGN];
+  static readonly all = [Tag.PHOTOGRAPHY, Tag.DEVELOPMENT, Tag.DESIGN];
 
   private constructor(
     readonly id: number,
@@ -23,6 +24,6 @@ export class Tag {
   ) {}
 
   static findById(id: number): Tag {
-    return Tag.allTags.find((t) => t.id === id) ?? this.PHOTOGRAPHY;
+    return Tag.all.find((t) => t.id === id) ?? this.PHOTOGRAPHY;
   }
 }

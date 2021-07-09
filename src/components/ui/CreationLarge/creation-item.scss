@@ -35,6 +35,8 @@
         width: 100%;
         background: $black;
         padding-bottom: 56.5%;
+        background-size: cover;
+        background-position: center center;
 
         @include breakpoint(medium) {
             padding-bottom: 75%;

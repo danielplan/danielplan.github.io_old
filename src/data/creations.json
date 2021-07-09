@@ -3,6 +3,7 @@
         {
             "name": "ryoko",
             "description": "Some description",
+            "thumbnail": "ryoko.jpg",
             "tags": [
                 1, 2
             ]

@@ -4,6 +4,7 @@ export interface Creation {
   description: string;
   slug: string;
   tags: Tag[];
+  thumbnail: string;
 }
 
 export enum Color {

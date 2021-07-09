@@ -10,6 +10,7 @@ function parseCreation(id: number, creation: {
   description: string;
   slug?: string;
   tags: number[];
+  thumbnail: string;
 }): Creation {
   return {
     id,
@@ -17,6 +18,7 @@ function parseCreation(id: number, creation: {
     description: creation.description,
     slug: creation.slug ?? creation.name,
     tags: parseTags(creation.tags),
+    thumbnail: creation.thumbnail
   };
 }
 

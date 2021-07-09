@@ -16,7 +16,8 @@ export default function CreationLarge({ creation, left }: Props): JSX.Element {
             <div className="creation-item-large">
                 <div className="row middle">
                     <div className={'column medium-6 large-7 ' + (left ? 'order-large-3' : '')}>
-                        <div className="image"></div>
+                        <div className="image" style={{ backgroundImage: 'url(/thumbnails/' + creation.thumbnail + ')' }}>
+                        </div>
                     </div>
                     <div className="column medium-6 large-5">
                         <div className="creation-content">

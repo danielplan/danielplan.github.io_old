@@ -13,7 +13,7 @@ export default function Creation({ creation }: Props): JSX.Element {
     return (
         <div className="column medium-6 large-4">
             <Link to={'/creations/' + creation.slug} className="creation-item">
-                <div className="image">
+                <div className="image" style={{ backgroundImage: 'url(/thumbnails/' + creation.thumbnail + ')' }}>
                 </div>
                 <div className="content">
                     {

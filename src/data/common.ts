@@ -10,12 +10,13 @@ export interface Creation {
 export enum Color {
   BLUE = "blue",
   PURPLE = "purple",
+  GREEN = "green"
 }
 
 export class Tag {
-  static readonly PHOTOGRAPHY = new Tag(1, "Photography", Color.BLUE);
-  static readonly DEVELOPMENT = new Tag(2, "Development", Color.PURPLE);
-  static readonly DESIGN = new Tag(3, "Design", Color.BLUE);
+  static readonly PHOTOGRAPHY = new Tag(1, "Photography", Color.GREEN);
+  static readonly DEVELOPMENT = new Tag(2, "Development", Color.BLUE);
+  static readonly DESIGN = new Tag(3, "Design", Color.PURPLE);
   static readonly all = [Tag.PHOTOGRAPHY, Tag.DEVELOPMENT, Tag.DESIGN];
 
   private constructor(

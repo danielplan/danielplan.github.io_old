@@ -5,7 +5,16 @@
             "description": "Some description",
             "thumbnail": "ryoko.jpg",
             "tags": [
-                1, 2
+                3, 2
+            ]
+        },
+        {
+            "name": "Data Logging Solutions",
+            "description": "Some description",
+            "thumbnail": "data-logging-solutions.jpg",
+            "slug": "data-logging-solutions",
+            "tags": [
+                3
             ]
         }
     ]

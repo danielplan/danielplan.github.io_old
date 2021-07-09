@@ -19,7 +19,7 @@ export default function Creations(): JSX.Element {
     }, [allCreations]);
 
     useEffect(() => {
-        setShownCreations(allCreations.filter(c => c.name.indexOf(searchTerm) >= 0))
+        setShownCreations(allCreations.filter(c => c.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0))
     }, [searchTerm, allCreations]);
 
     useEffect(() => {

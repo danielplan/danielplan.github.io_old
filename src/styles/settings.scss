@@ -5,10 +5,13 @@ $black: #30273D;
 $white: #FAF8FD;
 $lightgray: #F7F3FB;
 $linear-gradient: linear-gradient(to bottom, #9643FF 0%, #8435E8 100%);
+$box-shadow-lg: 0 0 30px rgba($black, 0.1);
+$box-shadow: 0 0 25px rgba($black, 0.1);
 
 $themeColors: (
     'purple': #7D17FF,
-    'blue': #3B70F8
+    'blue': #3B70F8,
+    'green': #2cce9d
 );
 
 /*Grid*/

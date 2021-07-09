@@ -17,6 +17,9 @@
             cursor: pointer;
             display: flex;
             flex-wrap: wrap;
+            &:hover {
+                opacity: 0.5;
+            }
 
             &.inactive {
                 opacity: 0.75;

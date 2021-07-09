@@ -1,9 +1,9 @@
 import Page from 'components/layout/Page';
 import { Creation } from 'data/common';
 import useCreations from 'data/CreationsContext';
-import { useState } from 'react';
-import { useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
+import Heading from 'components/ui/Heading';
+import Tag from 'components/ui/Tag';
 import { useParams } from 'react-router-dom';
 import './creations-detail.scss';
 
@@ -22,7 +22,35 @@ export default function Detail() {
     }, [allCreations, slug])
     if (creation) {
         return <Page className="creations-detail-page">
-            {slug}
+            <div className="section head-section">
+                <div className="content-container">
+                    <div className="row">
+                        <div className="column large-6">
+                            {
+                                creation.tags.length > 0 && (
+                                    <div className="tag-container">
+                                        {
+                                            creation.tags.map(t => (
+                                                <Tag tag={t} key={t.id} />
+                                            ))
+                                        }
+                                    </div>
+                                )
+                            }
+                            <Heading heading={creation.name} size="xlarge" />
+                            <p className="lead">
+                                {creation.description}
+                            </p>
+                        </div>
+                        <div className="column large-6">
+                            <div className="image-container">
+                                <div className="image" style={{ backgroundImage: 'url(/thumbnails/' + creation.thumbnail + ')' }}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Page>
     }
     return <Page className="creations-detail-page">

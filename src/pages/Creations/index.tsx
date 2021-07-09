@@ -3,9 +3,12 @@ import Page from 'components/layout/Page';
 import Heading from 'components/ui/Heading'
 import TextInput from 'components/ui/TextInput';
 import { useState } from 'react';
+import CreationComponent from 'components/ui/Creation';
+import useCreations from 'data/CreationsContext';
 
 export default function Creations(): JSX.Element {
     const [searchTerm, setSearchTerm] = useState<string>('');
+    const allCreations = useCreations();
 
     return (
         <Page className="creations-page">
@@ -26,6 +29,11 @@ export default function Creations(): JSX.Element {
                 </section>
                 <section className="creation-list">
                     <div className="row">
+                        {
+                            allCreations.map((creation, i) => (
+                                <CreationComponent creation={creation} key={creation.id} />
+                            ))
+                        }
                     </div>
                 </section>
             </div>

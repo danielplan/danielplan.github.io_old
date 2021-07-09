@@ -3,11 +3,10 @@ import Page from 'components/layout/Page';
 import Logo from 'components/svg/Logo';
 import Heading from 'components/ui/Heading';
 import CreationLarge from 'components/ui/CreationLarge';
-import { useContext } from 'react';
-import { CreationsContext } from 'data/CreationsContext';
+import useCreations from 'data/CreationsContext';
 
 export default function Home(): JSX.Element {
-    const allCreations = useContext(CreationsContext);
+    const allCreations = useCreations();
     return (
         <Page className="home-page">
             <section className="intro-section content-container">

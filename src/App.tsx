@@ -5,10 +5,12 @@ import CreationsDetail from 'pages/Creations/Detail';
 import Header from 'components/layout/Header';
 import Footer from 'components/layout/Footer';
 import { CreationProvider } from 'data/CreationsContext';
+import ScrollTop from 'components/helpers/ScrollTop';
 
 export default function App(): JSX.Element {
   return (
     <Router>
+      <ScrollTop />
       <Header />
       <CreationProvider>
         <Switch>

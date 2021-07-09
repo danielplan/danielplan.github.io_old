@@ -2,7 +2,7 @@ import './creation.scss';
 import { Creation as ICreation } from 'data/common';
 import Heading from 'components/ui/Heading';
 import Tag from 'components/ui/Tag';
-import ShortText from 'components/ui/ShortText';
+import ShortText from 'components/helpers/ShortText';
 import { Link } from 'react-router-dom';
 
 interface Props {

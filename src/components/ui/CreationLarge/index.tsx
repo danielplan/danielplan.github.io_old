@@ -3,7 +3,7 @@ import { Creation } from 'data/common';
 import Heading from 'components/ui/Heading';
 import Tag from 'components/ui/Tag';
 import Button from 'components/ui/Button';
-import ShortText from 'components/ui/ShortText';
+import ShortText from 'components/helpers/ShortText';
 
 interface Props {
     creation: Creation;

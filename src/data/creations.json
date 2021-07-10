@@ -1,29 +1,34 @@
 {
-    "creations": [
-        {
-            "name": "ryoko",
-            "description": "Some description",
-            "thumbnail": "ryoko.jpg",
-            "tags": [
-                3, 2
-            ],
-            "detailHeading": "Some heading",
-            "detailText": "asdfasdf",
-            "details": [{
-                "icon": "report_problem",
-                "title": "test",
-                "label": "asdf",
-                "link": "asdf"
-            }]
+    "creations": [{
+            "general": {
+                "name": "ryoko",
+                "description": "Some description",
+                "thumbnail": "ryoko.jpg",
+                "tags": [
+                    3, 2
+                ]
+            },
+            "details": {
+                "heading": "Some heading",
+                "description": "asdfasdf",
+                "boxes": [{
+                    "icon": "report_problem",
+                    "title": "test",
+                    "label": "asdf",
+                    "link": "asdf"
+                }]
+            }
         },
         {
-            "name": "Data Logging Solutions",
-            "description": "Some description",
-            "thumbnail": "data-logging-solutions.jpg",
-            "slug": "data-logging-solutions",
-            "tags": [
-                3
-            ]
+            "general": {
+                "name": "Data Logging Solutions",
+                "description": "Some description",
+                "thumbnail": "data-logging-solutions.jpg",
+                "slug": "data-logging-solutions",
+                "tags": [
+                    3
+                ]
+            }
         }
     ]
 }

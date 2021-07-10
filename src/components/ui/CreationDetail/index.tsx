@@ -7,17 +7,21 @@ interface Props {
 
 export default function CreationDetail({ detail }: Props) {
 
-    const inner = (<>
-        <span className="material-icons">
-            {detail.icon}
-        </span>
-        <div className="title">{detail.title}</div>
-        {
-            detail.label && (
-                <div className="label">{detail.label}</div>
-            )
-        }
-    </>
+    const inner = (<div className="inner">
+        <div className="icon-container">
+            <span className="material-icons">
+                {detail.icon}
+            </span>
+        </div>
+        <div className="text-container">
+            <div className="title">{detail.title}</div>
+            {
+                detail.label && (
+                    <div className="label">{detail.label}</div>
+                )
+            }
+        </div>
+    </div>
     )
 
     if (detail.link) {

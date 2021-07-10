@@ -12,23 +12,23 @@ interface Props {
 export default function Creation({ creation }: Props): JSX.Element {
     return (
         <div className="column medium-6 large-4">
-            <Link to={'/creations/' + creation.slug} className="creation-item">
-                <div className="image" style={{ backgroundImage: 'url(/thumbnails/' + creation.thumbnail + ')' }}>
+            <Link to={'/creations/' + creation.general.slug} className="creation-item">
+                <div className="image" style={{ backgroundImage: 'url(' + creation.general.thumbnail + ')' }}>
                 </div>
                 <div className="content">
                     {
-                        creation.tags.length > 0 && (
+                        creation.general.tags.length > 0 && (
                             <div className="tag-container">
                                 {
-                                    creation.tags.map(t => (
+                                    creation.general.tags.map(t => (
                                         <Tag tag={t} key={t.id} />
                                     ))
                                 }
                             </div>
                         )
                     }
-                    <Heading heading={creation.name} size="tiny" />
-                    <ShortText text={creation.description} length={100} />
+                    <Heading heading={creation.general.name} size="tiny" />
+                    <ShortText text={creation.general.description} length={100} />
                 </div>
             </Link>
         </div>

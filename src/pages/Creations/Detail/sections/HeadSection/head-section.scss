@@ -1,0 +1,40 @@
+@import 'styles/settings.scss';
+
+.creations-detail-page {
+    .head-section {
+        .lead {
+            @include breakpoint(medium) {
+                font-size: 20px;
+            }
+        }
+
+        .heading {
+            &.xlarge {
+                @include breakpoint(large) {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        .tag-container {
+            margin: -10px;
+            margin-bottom: 0;
+
+            .tag {
+                margin: 10px;
+            }
+        }
+
+        .image-container {
+            @include breakpoint(large) {
+                padding-top: 30px;
+            }
+        }
+
+        .image {
+            padding-bottom: 75%;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}

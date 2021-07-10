@@ -1,14 +1,25 @@
 export interface Creation {
-  id: number;
-  name: string;
-  description: string;
-  slug: string;
-  tags: Tag[];
-  thumbnail: string;
-  detailHeading?: string;
-  detailText?:string;
-  details?: CreationDetail[];
+  general: {
+    id: number;
+    name: string;
+    description: string;
+    slug: string;
+    tags: Tag[];
+    thumbnail: string;
+  };
+  details?: {
+    heading?: string;
+    description?: string;
+    boxes?: CreationDetail[];
+  };
+  previews?: {
+    style: CreationPreviewStyle,
+    leftImages?: string[];
+    rightImages?: string[];
+  }
 }
+
+export type CreationPreviewStyle =  "default" | "phone_mockups";
 
 export interface CreationDetail {
   icon: string;
@@ -20,7 +31,7 @@ export interface CreationDetail {
 export enum Color {
   BLUE = "blue",
   PURPLE = "purple",
-  ORANGE = "orange"
+  ORANGE = "orange",
 }
 
 export class Tag {

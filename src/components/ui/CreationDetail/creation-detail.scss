@@ -1,0 +1,52 @@
+@import 'styles/settings';
+
+a.creation-detail-box {
+    box-shadow: $box-shadow;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.creation-detail-box {
+    color: $black;
+    display: inline-block;
+    background: $white;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 15px;
+
+    .inner {
+        padding: 25px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .icon-container {
+            background: $lightgray;
+            color: $secondary;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            .material-icons {
+                font-size: 32px;
+            }
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .label {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    }
+}

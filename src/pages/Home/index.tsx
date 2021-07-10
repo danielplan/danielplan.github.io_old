@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
                 </div>
                 {
                     allCreations.slice(0, 3).map((creation, i) => (
-                        <CreationLarge left={i % 2 === 0} creation={creation} key={creation.id}/>
+                        <CreationLarge left={i % 2 === 0} creation={creation} key={i}/>
                     ))
                 }
             </section>

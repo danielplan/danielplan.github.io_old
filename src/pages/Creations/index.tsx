@@ -19,11 +19,11 @@ export default function Creations(): JSX.Element {
     }, [allCreations]);
 
     useEffect(() => {
-        setShownCreations(allCreations.filter(c => c.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0))
+        setShownCreations(allCreations.filter(c => c.general.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0))
     }, [searchTerm, allCreations]);
 
     useEffect(() => {
-        setShownCreations(allCreations.filter(c => !c.tags.every(t => hiddenTags.some(ht => ht === t.id))))
+        setShownCreations(allCreations.filter(c => !c.general.tags.every(t => hiddenTags.some(ht => ht === t.id))))
     }, [hiddenTags, allCreations]);
 
     return (
@@ -68,7 +68,7 @@ export default function Creations(): JSX.Element {
                     <div className="row">
                         {
                             shownCreations.map((creation, i) => (
-                                <CreationComponent creation={creation} key={creation.id} />
+                                <CreationComponent creation={creation} key={i} />
                             ))
                         }
                     </div>

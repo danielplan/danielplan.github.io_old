@@ -8,7 +8,7 @@ import useCreations from 'data/CreationsContext';
 export default function Home(): JSX.Element {
     const allCreations = useCreations();
     return (
-        <Page className="home-page">
+        <Page className="home-page" withoutMargin>
             <section className="intro-section content-container">
                 <div className="inner">
                     <Logo />
@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
                 </div>
                 {
                     allCreations.slice(0, 3).map((creation, i) => (
-                        <CreationLarge left={i % 2 === 0} creation={creation} key={i}/>
+                        <CreationLarge left={i % 2 === 0} creation={creation} key={i} />
                     ))
                 }
             </section>

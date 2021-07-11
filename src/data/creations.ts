@@ -23,9 +23,8 @@ function parseCreation(
       boxes?: CreationDetail[];
     };
     previews?: {
-      style: CreationPreviewStyle;
-      leftImages: string[];
-      rightImages: string[];
+      style: string;
+      images: string[];
     };
   }
 ): Creation {
@@ -44,13 +43,19 @@ function parseCreation(
       boxes: creation.details?.boxes,
     },
     previews: {
-      style: creation.previews?.style ?? "default",
-      leftImages: creation.previews?.leftImages,
-      rightImages: creation.previews?.rightImages
-    }
+      style: parsePreviewStyle(creation.previews?.style),
+      images: creation.previews?.images,
+    },
   };
 }
 
 function parseTags(tags: number[]): Tag[] {
   return tags.map(Tag.findById);
+}
+
+function parsePreviewStyle(style?: string) {
+  return (
+    Object.values(CreationPreviewStyle).find((c) => c === style) ??
+    CreationPreviewStyle.DEFAULT
+  );
 }

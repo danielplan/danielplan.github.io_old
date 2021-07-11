@@ -17,6 +17,12 @@
                     "label": "asdf",
                     "link": "asdf"
                 }]
+            },
+            "previews": {
+                "style": "phone_mockups",
+                "images": [
+                    "ryoko/tasks.jpg", "ryoko/Projects.jpg", "ryoko/teams.jpg", "ryoko/teams.jpg", "ryoko/teams.jpg", "ryoko/teams.jpg"
+                ]
             }
         },
         {
@@ -27,6 +33,32 @@
                 "slug": "data-logging-solutions",
                 "tags": [
                     3
+                ]
+            }
+        }, {
+            "general": {
+                "name": "Winter wonderland",
+                "description": "Some description",
+                "thumbnail": "ryoko.jpg",
+                "tags": [
+                    1
+                ],
+                "slug": "winter-wonderland"
+            },
+            "details": {
+                "heading": "It's snowing",
+                "description": "asdfasdf",
+                "boxes": [{
+                    "icon": "report_problem",
+                    "title": "test",
+                    "label": "asdf",
+                    "link": "asdf"
+                }]
+            },
+            "previews": {
+                "style": "default",
+                "images": [
+                    "winter-wonderland/1.jpg", "winter-wonderland/1.jpg", "winter-wonderland/1.jpg", "winter-wonderland/1.jpg"
                 ]
             }
         }

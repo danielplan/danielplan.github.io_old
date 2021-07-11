@@ -14,12 +14,14 @@ export interface Creation {
   };
   previews?: {
     style: CreationPreviewStyle,
-    leftImages?: string[];
-    rightImages?: string[];
+    images?: string[];
   }
 }
 
-export type CreationPreviewStyle =  "default" | "phone_mockups";
+export enum CreationPreviewStyle {
+  DEFAULT = 'default',
+  PHONE_MOCKUPS = 'phone_mockups'
+}
 
 export interface CreationDetail {
   icon: string;

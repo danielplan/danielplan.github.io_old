@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import './creations-detail.scss';
 import HeadSection from './sections/HeadSection';
 import DetailSection from './sections/DetailSection';
+import PreviewSection from './sections/PreviewSection';
 
 
 interface Params {
@@ -25,6 +26,7 @@ export default function Detail() {
             <Page className="creations-detail-page">
                 <HeadSection creation={creation} />
                 <DetailSection creation={creation} />
+                <PreviewSection creation={creation} />
             </Page>)
     }
     return <Page className="creations-detail-page">

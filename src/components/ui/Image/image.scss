@@ -1,0 +1,87 @@
+@import 'styles/settings';
+
+.light-box-container {
+    cursor: zoom-in;
+    position: relative;
+
+    .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        z-index: 2;
+        opacity: 0;
+        font-size: 64px;
+    }
+
+    &:before {
+        content: ' ';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($black, .25);
+        position: absolute;
+        opacity: 0;
+        transition: 300ms ease;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+        .icon {
+            opacity: 1;
+        }
+    }
+}
+
+.light-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, .75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: zoom-out;
+    animation: 300ms ease opacityIn;
+
+    &.go-out {
+        opacity: 0;
+
+        img {
+            transform: translateY(20px);
+        }
+    }
+
+    img {
+        animation: 600ms ease slideIn;
+        max-width: 90%;
+        max-height: 90%;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacityIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,19 @@
+@import 'styles/settings';
+
+.portfolio-items {
+    @include breakpoint(large) {
+        padding: 50px 0;
+    }
+}
+
+.portfolio-item {
+    @include breakpoint(large) {
+        &:nth-child(3n + 1) {
+            margin-top: -50px;
+        }
+
+        &:nth-child(3n + 2) {
+            margin-top: -25px;
+        }
+    }
+}

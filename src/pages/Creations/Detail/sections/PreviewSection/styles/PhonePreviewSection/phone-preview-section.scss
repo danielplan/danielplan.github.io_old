@@ -1,0 +1,36 @@
+@import 'styles/settings';
+
+.creations-detail-page {
+    .phone-mockups {
+        img {
+            width: 100%;
+        }
+
+
+
+        .phone-mockup {
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            border: 10px solid $black;
+
+            &:before {
+                content: ' ';
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $black;
+                height: 20px;
+                border-radius: 5px;
+                width: 100px;
+
+            }
+
+            @include breakpoint(medium) {
+                margin: 20px;
+            }
+
+        }
+    }
+}

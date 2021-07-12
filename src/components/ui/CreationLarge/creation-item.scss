@@ -26,6 +26,7 @@
         .column {
             padding: 0;
         }
+
         .row {
             margin: 0;
         }
@@ -44,7 +45,7 @@
         }
     }
 
-    @include breakpoint(large) {
+   @include breakpoint(large) {
         .order-large-3 {
             &+* .creation-content {
                 &:before {
@@ -68,7 +69,7 @@
         padding: 30px;
 
         @include breakpoint(medium) {
-            padding: 100px 0;
+            padding: 75px 0;
 
             &:before {
                 right: auto;
@@ -82,7 +83,7 @@
                 bottom: 0;
                 height: 100%;
                 right: 100%;
-                width: 100px;
+                width: 75px;
                 background-color: $lightgray;
             }
         }

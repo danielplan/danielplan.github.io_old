@@ -3,6 +3,11 @@
 .light-box-container {
     cursor: zoom-in;
     position: relative;
+    display: flex;
+    flex-shrink: 1;
+    img {
+        width: 100%;
+    }
 
     .icon {
         position: absolute;

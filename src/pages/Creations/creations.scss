@@ -1,6 +1,14 @@
 @import 'styles/settings';
 
 .creations-page {
+    .heading {
+        margin-bottom: 15px;
+
+        @include breakpoint(large) {
+            margin-bottom: 30px;
+        }
+    }
+
     .filter-container {
         margin: 50px 0;
     }
@@ -15,6 +23,7 @@
             cursor: pointer;
             display: flex;
             flex-wrap: wrap;
+
             &:hover {
                 opacity: 0.5;
             }

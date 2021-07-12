@@ -1,6 +1,5 @@
 import './creations.scss';
 import Page from 'components/layout/Page';
-import Heading from 'components/ui/Heading'
 import TagComponent from 'components/ui/Tag';
 import TextInput from 'components/ui/TextInput';
 import { useState, useEffect } from 'react';
@@ -32,7 +31,12 @@ export default function Creations(): JSX.Element {
                 <section className="heading-section">
                     <div className="row">
                         <div className="column large-6">
-                            <Heading heading="My creations" size="xlarge" />
+                            <h1 className="heading xlarge">
+                                My creations
+                                <span className="text-secondary">
+                                    .
+                                </span>
+                            </h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Sit viverra eget scelerisque nisl ut turpis porttitor.

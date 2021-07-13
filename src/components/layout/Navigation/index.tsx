@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import Button from 'components/ui/Button';
 import './navigation.scss';
 
 export default function Navigation(): JSX.Element {
@@ -6,8 +7,7 @@ export default function Navigation(): JSX.Element {
         <nav className="site-navigation">
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/creations">My creations</NavLink>
-            <NavLink to="/about">About me</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <Button route="/contact">Contact</Button>
         </nav>
     )
 }

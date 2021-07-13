@@ -3,18 +3,29 @@
 .site-navigation {
     padding: 0 40px;
 
+    .button {
+        padding: 15px 25px;
+        color: $white;
+        margin-left: 20px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
     a {
         color: $black;
         padding: 25px;
-        text-transform: uppercase;
         font-weight: 600;
+        font-size: 16px;
+        font-weight: bold;
 
         &.active {
-            font-weight: bold;
+            color: $secondary;
         }
 
         &:hover {
-            color: $primary;
+            color: $secondary;
             opacity: .75;
         }
     }

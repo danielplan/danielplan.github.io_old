@@ -29,6 +29,9 @@
         margin: -20px 0 0 15px;
         padding: 20px;
         font-size: 16px;
+        .heading {
+            margin-bottom: 10px;
+        }
 
         @include breakpoint(large) {
             padding: 25px;

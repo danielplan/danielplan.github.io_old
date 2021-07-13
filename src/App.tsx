@@ -7,7 +7,7 @@ import ScrollTop from 'components/helpers/ScrollTop';
 import Home from 'pages/Home';
 import Creations from 'pages/Creations';
 import CreationsDetail from 'pages/Creations/Detail';
-import About from 'pages/About';
+import Contact from 'pages/Contact';
 
 export default function App(): JSX.Element {
   return (
@@ -16,7 +16,7 @@ export default function App(): JSX.Element {
       <Header />
       <CreationProvider>
         <Switch>
-          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route path="/creations/:slug" component={CreationsDetail} />
           <Route path="/creations" component={Creations} />
           <Route path="/" component={Home} />

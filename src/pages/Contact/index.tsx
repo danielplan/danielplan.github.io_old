@@ -1,4 +1,4 @@
-import './about.scss';
+import './contact.scss';
 import Page from 'components/layout/Page';
 
 export default function About(): JSX.Element {
@@ -8,7 +8,7 @@ export default function About(): JSX.Element {
                 <div className="row">
                     <div className="column large-6">
                         <h1 className="heading xlarge">
-                            This is me
+                            Let's get in touch
                             <span className="text-secondary">
                                 .
                             </span>

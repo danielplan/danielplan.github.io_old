@@ -9,5 +9,27 @@
                 margin-bottom: 30px;
             }
         }
+
+        .contact-boxes {
+            margin: 40px -20px;
+
+            @include breakpoint(medium) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .contact-box {
+                margin: 20px;
+
+                @include breakpoint(medium) {
+                    width: calc(100% / 3 - 20px);
+
+                    &:nth-child(3n + 2) {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
     }
 }

@@ -9,6 +9,10 @@
     transition-property: transform, opacity, color, background-color, box-shadow, stroke, visibility;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     font-size: 16px;
@@ -92,6 +96,10 @@ p {
     &.middle {
         align-items: center;
     }
+}
+
+.text-center {
+    text-align: center;
 }
 
 .column {

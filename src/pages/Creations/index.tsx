@@ -47,8 +47,9 @@ export default function Creations(): JSX.Element {
                                 <TextInput label="Search" name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
                                 <div className="filter-tags">
                                     {
-                                        Tag.all.map((tag, i) => (
+                                        Tag.all.map((tag) => (
                                             <div
+                                                key={tag.id}
                                                 className={'filter-item' + (hiddenTags.indexOf(tag.id) >= 0 ? ' inactive' : '')}
                                                 onClick={() => setHiddenTags(
                                                     state => {
@@ -59,7 +60,7 @@ export default function Creations(): JSX.Element {
                                                         }
                                                     }
                                                 )}>
-                                                <TagComponent tag={tag} key={i} />
+                                                <TagComponent tag={tag} />
                                             </div>
                                         ))
                                     }
@@ -71,8 +72,8 @@ export default function Creations(): JSX.Element {
                 <section className="creation-list">
                     <div className="row">
                         {
-                            shownCreations.map((creation, i) => (
-                                <CreationComponent creation={creation} key={i} />
+                            shownCreations.map((creation) => (
+                                <CreationComponent creation={creation} key={creation.general.id} />
                             ))
                         }
                     </div>

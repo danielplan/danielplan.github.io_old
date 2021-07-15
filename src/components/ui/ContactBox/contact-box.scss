@@ -1,0 +1,33 @@
+@import 'styles/settings';
+
+.contact-box {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 15px;
+
+    @include breakpoint(large) {
+        padding: 40px;
+    }
+
+    .icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow;
+    }
+}

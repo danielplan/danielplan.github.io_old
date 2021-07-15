@@ -11,9 +11,7 @@ export default function Image({ src }: Props) {
     const [animateOut, setAnimateOut] = useState(false);
     return <>
         <div className="light-box-container" onClick={() => setOpenLightBox(true)}>
-            <span className="material-icons icon">
-                zoom_in
-            </span>
+            <i className="uil uil-search-plus icon"></i>
             <img src={src} alt="" />
         </div>
         {

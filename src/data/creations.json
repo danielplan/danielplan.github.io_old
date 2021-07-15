@@ -12,7 +12,7 @@
                 "heading": "Some heading",
                 "description": "asdfasdf",
                 "boxes": [{
-                    "icon": "report_problem",
+                    "icon": "atom",
                     "title": "test",
                     "label": "asdf",
                     "link": "asdf"
@@ -49,7 +49,7 @@
                 "heading": "It's snowing",
                 "description": "asdfasdf",
                 "boxes": [{
-                    "icon": "report_problem",
+                    "icon": "atom",
                     "title": "test",
                     "label": "asdf",
                     "link": "asdf"

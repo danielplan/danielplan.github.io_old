@@ -9,8 +9,7 @@ export default function CreationDetail({ detail }: Props) {
 
     const inner = (<div className="inner">
         <div className="icon-container">
-            <span className="material-icons">
-                {detail.icon}
+            <span className={'icon uil uil-' + detail.icon}>
             </span>
         </div>
         <div className="text-container">

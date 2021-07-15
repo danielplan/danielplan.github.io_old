@@ -10,6 +10,7 @@ interface Props {
 }
 
 export default function Creation({ creation }: Props): JSX.Element {
+    
     return (
         <div className="column medium-6 large-4">
             <Link to={'/creations/' + creation.general.slug} className="creation-item">

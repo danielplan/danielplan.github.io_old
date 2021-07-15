@@ -26,7 +26,7 @@ export default function DetailSection({ creation }: { creation: Creation }) {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="column large-2 medium-3 small-6">
+                        <div className="column large-3 medium-4 small-6">
                             {
                                 creation.details.boxes && creation.details.boxes.length > 0 &&
                                 (

@@ -1,12 +1,127 @@
 @import 'styles/settings';
 
+.hamburger {
+    cursor: pointer;
+    padding: 20px;
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+
+    .inner {
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .dot {
+        transform-origin: right center;
+        &:nth-child(odd) {
+
+            &:before,
+            &:after {
+                top: 0;
+            }
+        }
+
+        &:nth-child(even) {
+
+            &:before,
+            &:after {
+                transition: 100ms ease;
+                bottom: 0;
+            }
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+
+        &:before,
+        &:after {
+            content: ' ';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: $black;
+            border-radius: 50%;
+            transition: 300ms ease;
+        }
+    }
+
+    &.expanded {
+        transform: rotate(90deg) translateY(25%);
+        .dot {
+            &:nth-child(even) {
+                &:before,
+                &:after {
+                    opacity: 0;
+                }
+            }
+
+            &:before,
+            &:after {
+                width: 30px;
+                border-radius: 5px;
+                transform: rotate(45deg);
+                height: 5px;
+            }
+
+            &:after {
+
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+}
+
 .site-navigation {
     padding: 0 40px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    right: 0;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    background-color: $white;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    &.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include breakpoint(medium) {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
 
     .button {
         padding: 15px 25px;
         color: $white;
-        margin-left: 20px;
+        margin-top: 20px;
+
+        @include breakpoint(medium) {
+            margin-top: 0;
+            margin-left: 20px;
+
+        }
 
         &:hover {
             color: $white;
@@ -17,8 +132,13 @@
         color: $black;
         padding: 25px;
         font-weight: 600;
-        font-size: 16px;
         font-weight: bold;
+        font-size: 20px;
+
+        @include breakpoint(medium) {
+            font-size: 16px;
+
+        }
 
         &.active {
             color: $secondary;

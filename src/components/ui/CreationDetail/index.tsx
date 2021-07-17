@@ -25,7 +25,7 @@ export default function CreationDetail({ detail }: Props) {
 
     if (detail.link) {
         return (
-            <a href={detail.link} className="creation-detail-box">
+            <a href={detail.link} className="creation-detail-box" target="_blank" rel="noreferrer">
                 {inner}
             </a>
         )

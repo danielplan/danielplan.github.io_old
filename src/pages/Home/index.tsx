@@ -4,6 +4,7 @@ import Logo from 'components/svg/Logo';
 import Heading from 'components/ui/Heading';
 import CreationLarge from 'components/ui/CreationLarge';
 import useCreations from 'data/CreationsContext';
+import Button from 'components/ui/Button';
 
 export default function Home(): JSX.Element {
     const allCreations = useCreations();
@@ -26,23 +27,24 @@ export default function Home(): JSX.Element {
                     <div className="row center">
                         <div className="column large-8">
                             <p className="lead">
-                                I’m a <strong>computer science student</strong> focused on web development and -design, as well as photography.
+                                I’m a <strong>20 year old computer science student</strong> focused on web development, design and photography.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
             <section className="section-wrapper">
-                <div className="content-container">
+                <div className="content-container creations-header">
                     <div className="row">
                         <div className="column large-6">
                             <Heading heading="My creations" size="xlarge" />
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sit viverra eget scelerisque nisl ut turpis porttitor.
-                                Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
-                                Cras sit tempus nec mauris.
+                                Let's have a look at what I've been working on recently.
+                                If you like what you are seeing, just click on the button below, there is more.
                             </p>
+                            <Button route="/creations">
+                                More creations...
+                            </Button>
                         </div>
                     </div>
                 </div>

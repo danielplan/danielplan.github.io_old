@@ -1,19 +1,17 @@
 @import 'styles/settings';
 
-a.creation-detail-box {
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: $box-shadow;
-    }
-}
-
 .creation-detail-box {
     color: $black;
     display: inline-block;
     background: $white;
     width: 100%;
     border-radius: 15px;
+    box-shadow: $box-shadow-sm;
+    height: 100%;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
 
     .inner {
         display: flex;
@@ -24,11 +22,11 @@ a.creation-detail-box {
         padding: 25px 10px;
 
         @include breakpoint(medium) {
-            padding: 50px 25px;
+            padding: 50px 25px 35px 25px;
         }
 
         .icon-container {
-            color: $secondary;
+            color: $primary;
             margin-bottom: 24px;
 
             @include breakpoint(medium) {
@@ -55,6 +53,8 @@ a.creation-detail-box {
         .label {
             margin-top: 10px;
             text-align: center;
+            line-height: 1.6;
+            font-size: 16px;
         }
     }
 }

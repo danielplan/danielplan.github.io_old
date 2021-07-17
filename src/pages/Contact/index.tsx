@@ -21,23 +21,23 @@ export default function About(): JSX.Element {
                 </div>
                 <div className="contact-boxes">
                     <ContactBox
-                        color="#833AB4" 
-                        href="https://instagram.com/plandaniel" 
+                        color="#833AB4"
+                        href="https://instagram.com/plandaniel"
                         title="Instagram"
                         label="@plandaniel"
                         icon="instagram" />
                     <ContactBox
-                        color="#FF6056" 
-                        href="mailto:dani.plan@yahoo.de" 
-                        title="Email"
-                        label="dani.plan(at)yahoo.de"
-                        icon="envelope" />
-                    <ContactBox
-                        color="#000" 
-                        href="https://unsplash.com/@planiel" 
+                        color="#000"
+                        href="https://unsplash.com/@planiel"
                         title="Unsplash"
                         label="@planiel"
                         icon="camera" />
+                    <ContactBox
+                        color="#1DA1F2"
+                        href="https://twitter.com/planiels"
+                        title="Twitter"
+                        label="@planiels"
+                        icon="twitter" />
                 </div>
             </div>
         </section>

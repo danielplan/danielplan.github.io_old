@@ -43,7 +43,7 @@ export default function Home(): JSX.Element {
                                 If you like what you are seeing, just click on the button below, there is even more.
                             </p>
                             <Button route="/creations">
-                                More creations...
+                                All creations...
                             </Button>
                         </div>
                     </div>

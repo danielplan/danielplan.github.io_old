@@ -21,8 +21,8 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <section className="background-primary">
-                <div className="section-wrapper content-container me-section">
+            <section className="background-primary me-section section-wrapper">
+                <div className="content-container">
                     <div className="row center">
                         <div className="column large-8">
                             <p className="lead">

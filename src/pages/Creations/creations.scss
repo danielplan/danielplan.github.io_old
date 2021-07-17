@@ -2,15 +2,26 @@
 
 .creations-page {
     .heading {
-        margin-bottom: 15px;
+        &.xlarge {
+            margin-bottom: 15px;
 
-        @include breakpoint(large) {
-            margin-bottom: 30px;
+            @include breakpoint(large) {
+                margin-bottom: 30px;
+            }
         }
     }
 
-    .filter-container {
-        margin: 50px 0;
+    .filter-section {
+        margin: 25px 0;
+        padding: 35px 0;
+
+        @include breakpoint(large) {
+            padding: 75px 0;
+            margin: 75px 0;
+        }
+        .filter-container {
+            margin-top: 25px;
+        }
     }
 
     .filter-tags {
@@ -23,14 +34,14 @@
             cursor: pointer;
             display: flex;
             flex-wrap: wrap;
+            opacity: 0.75;
 
             &:hover {
                 opacity: 0.5;
             }
 
-            &.inactive {
-                opacity: 0.75;
-                transform: scale(.9);
+            &.active {
+                opacity: 1;
             }
         }
     }

@@ -2,7 +2,7 @@ import Heading from 'components/ui/Heading';
 import Tag from 'components/ui/Tag';
 import './head-section.scss';
 import { Creation } from 'data/common';
-
+import Image from 'components/ui/Image';
 
 export default function HeadSection({ creation }: { creation: Creation }) {
 
@@ -28,8 +28,7 @@ export default function HeadSection({ creation }: { creation: Creation }) {
                 </div>
                 <div className="column large-6">
                     <div className="image-container">
-                        <div className="image" style={{ backgroundImage: 'url(' + creation.general.thumbnail + ')' }}>
-                        </div>
+                        <Image src={creation.general.thumbnail} />
                     </div>
                 </div>
             </div>

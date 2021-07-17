@@ -1,6 +1,7 @@
 import './image.scss';
 import { createPortal } from 'react-dom';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 interface Props {
     src: string;
@@ -9,6 +10,15 @@ interface Props {
 export default function Image({ src }: Props) {
     const [openLightBox, setOpenLightBox] = useState(false);
     const [animateOut, setAnimateOut] = useState(false);
+    
+    useEffect(() => {
+        if (openLightBox) {
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.documentElement.style.overflow = '';
+        }
+    }, [openLightBox]);
+    
     return <>
         <div className="light-box-container" onClick={() => setOpenLightBox(true)}>
             <i className="uil uil-search-plus icon"></i>

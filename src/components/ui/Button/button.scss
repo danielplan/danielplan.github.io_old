@@ -14,9 +14,12 @@ button {
     border-radius: 15px;
     cursor: pointer;
     display: inline-block;
+    font-weight: bold;
+
     &:hover {
         transform: translateY(-5px);
     }
+
     &:active {
         transform: translateY(-5px) scale(.95);
     }

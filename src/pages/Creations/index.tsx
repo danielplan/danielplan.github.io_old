@@ -6,10 +6,11 @@ import { useState, useEffect } from 'react';
 import CreationComponent from 'components/ui/Creation';
 import useCreations from 'data/CreationsContext';
 import { Creation, Tag } from 'data/common';
+import Heading from 'components/ui/Heading';
 
 export default function Creations(): JSX.Element {
     const [searchTerm, setSearchTerm] = useState<string>('');
-    const [hiddenTags, setHiddenTags] = useState<number[]>([]);
+    const [filterTags, setFilterTags] = useState<number[]>([]);
     const allCreations = useCreations();
     const [shownCreations, setShownCreations] = useState<Creation[]>([]);
 
@@ -22,8 +23,12 @@ export default function Creations(): JSX.Element {
     }, [searchTerm, allCreations]);
 
     useEffect(() => {
-        setShownCreations(allCreations.filter(c => !c.general.tags.every(t => hiddenTags.some(ht => ht === t.id))))
-    }, [hiddenTags, allCreations]);
+        if (filterTags.length) {
+            setShownCreations(allCreations.filter(c => c.general.tags.some(t => filterTags.some(ht => ht === t.id))))
+        } else {
+            setShownCreations(allCreations);
+        }
+    }, [filterTags, allCreations]);
 
     return (
         <Page className="creations-page">
@@ -43,15 +48,28 @@ export default function Creations(): JSX.Element {
                                 Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
                                 Cras sit tempus nec mauris.
                             </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section className="filter-section background-light">
+                <div className="content-container">
+
+                    <div className="row">
+                        <div className="column large-6">
+                            <Heading heading="Let's have a look" size="small" />
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
                             <div className="filter-container">
-                                <TextInput label="Search" name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
+                                <TextInput search name="search" defaultValue={searchTerm} onChange={setSearchTerm} />
                                 <div className="filter-tags">
                                     {
                                         Tag.all.map((tag) => (
                                             <div
                                                 key={tag.id}
-                                                className={'filter-item' + (hiddenTags.indexOf(tag.id) >= 0 ? ' inactive' : '')}
-                                                onClick={() => setHiddenTags(
+                                                className={'filter-item' + (filterTags.indexOf(tag.id) >= 0 ? ' active' : '')}
+                                                onClick={() => setFilterTags(
                                                     state => {
                                                         if (state.indexOf(tag.id) >= 0) {
                                                             return state.filter(t => t !== tag.id);
@@ -68,7 +86,9 @@ export default function Creations(): JSX.Element {
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            <div className="content-container">
                 <section className="creation-list">
                     <div className="row">
                         {

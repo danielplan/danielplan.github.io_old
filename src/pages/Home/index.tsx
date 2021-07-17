@@ -39,8 +39,8 @@ export default function Home(): JSX.Element {
                         <div className="column large-6">
                             <Heading heading="My creations" size="xlarge" />
                             <p>
-                                Let's have a look at what I've been working on recently.
-                                If you like what you are seeing, just click on the button below, there is more.
+                                Here are some of the projects I have been working on recently.
+                                If you like what you are seeing, just click on the button below, there is even more.
                             </p>
                             <Button route="/creations">
                                 More creations...

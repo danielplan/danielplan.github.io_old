@@ -43,10 +43,8 @@ export default function Creations(): JSX.Element {
                                 </span>
                             </h1>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sit viverra eget scelerisque nisl ut turpis porttitor.
-                                Viverra quis vivamus potenti est. Blandit dictumst non nunc tellus, elementum.
-                                Cras sit tempus nec mauris.
+                                Here you can see all of the projects I have been working on. By clicking
+                                on one of them you can find out more about it.
                             </p>
                         </div>
                     </div>
@@ -59,7 +57,8 @@ export default function Creations(): JSX.Element {
                         <div className="column large-6">
                             <Heading heading="Let's have a look" size="small" />
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Down below you can find a list of all of my creations. Here you can filter 
+                                them by tags or search for a specific creation by its name.
                             </p>
                             <div className="filter-container">
                                 <TextInput search name="search" defaultValue={searchTerm} onChange={setSearchTerm} />

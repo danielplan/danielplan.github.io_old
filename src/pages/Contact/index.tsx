@@ -15,7 +15,8 @@ export default function About(): JSX.Element {
                             </span>
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, consectetur iusto quis id consequatur similique porro quia dignissimos illo omnis.
+                            Do you have any questions or are you interested in a collaboration?
+                            Here are some platforms where you can contact me directly.
                         </p>
                     </div>
                 </div>

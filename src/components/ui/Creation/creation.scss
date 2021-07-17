@@ -1,0 +1,49 @@
+@import 'styles/settings.scss';
+
+.creation-item {
+    width: 100%;
+    color: $black;
+
+    .image {
+        padding-bottom: 75%;
+        background: $black;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &:hover {
+        .content {
+            transform: translateY(-10px);
+        }
+    }
+
+    &:active {
+        .content {
+            transform: translateY(-10px) scale(.95);
+        }
+    }
+
+    .content {
+        background: $lightgray;
+        width: calc(100% - 30px);
+        margin: -20px 0 0 15px;
+        padding: 20px;
+        font-size: 16px;
+        .heading {
+            margin-bottom: 10px;
+        }
+
+        @include breakpoint(large) {
+            padding: 25px;
+        }
+
+        .tag-container {
+            margin: -5px;
+            margin-bottom: 10px;
+
+            .tag {
+                margin: 5px;
+            }
+        }
+    }
+}

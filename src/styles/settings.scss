@@ -1,20 +1,36 @@
 /*Colors*/
-$primary: #FF4F17;
-$secondary: #7D17FF;
-$black: #1B1226;
-$off-white: #FAF8FD;
-$lightgray: #F7F7F9;
+$primary: #FF6056;
+$secondary: #9643FF;
+$black: #30273D;
+$white: #FCFBFE;
+$lightgray: #FBF9FF;
+$linear-gradient: linear-gradient(to bottom, #9643FF 0%, #8435E8 100%);
+$box-shadow-lg: 0 0 30px rgba($black, 0.1);
+$box-shadow: 0 0 15px rgba($black, 0.15);
+$box-shadow-sm: 0 0 10px rgba($black, 0.05);
+
+$themeColors: (
+    'purple': #7D17FF,
+    'blue': #3B70F8,
+    'orange': #FF6056
+);
 
 /*Grid*/
 $columns: 12;
 $gutter: 30px;
-$breakpoints: ('small': 480px,
+$breakpoints: (
+    'small': 480px,
     'medium': 860px,
     'large': 1400px,
-    'xlarge': 1640px);
+    'xlarge': 1640px
+);
 
 /*General*/
-$header-height: 110px;
+$header-height: 70px;
+$header-height-large: 90px;
+$transition: 300ms ease;
+$body-font: 'Montserrat', sans-serif;
+$heading-font: 'Poppins', $body-font;
 
 @function getFrom($map, $key) {
 

@@ -2,11 +2,34 @@
 
 .home-page {
 
+    .heading {
+        &.special {
+            font-size: 36px;
+            color: $primary;
+            font-family: $heading-font;
+            font-weight: normal;
+
+            @include breakpoint(medium) {
+                font-size: 68px;
+            }
+
+            @include breakpoint(large) {
+                font-size: 96px;
+            }
+        }
+    }
+
+    .creations-header {
+        .button {
+            margin-top: 30px;
+        }
+    }
+
     .section-wrapper {
         margin: 60px auto;
 
         @include breakpoint(large) {
-            margin: 100px auto;
+            margin: 200px auto;
         }
     }
 
@@ -19,6 +42,7 @@
 
         @include breakpoint(large) {
             min-height: 100vh;
+            margin-bottom: -200px;
         }
 
         .text-overlay {
@@ -50,6 +74,27 @@
             transform: translate(-50%, -50%);
             opacity: 0.05;
             z-index: -1;
+        }
+    }
+
+    .lead {
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 0 20px;
+
+        @include breakpoint(medium) {
+            font-size: 28px;
+        }
+
+        text-align: center;
+    }
+
+    .me-section {
+        padding: 50px 0;
+        width: 100%;
+
+        @include breakpoint(medium) {
+            padding: 100px 0;
         }
     }
 }

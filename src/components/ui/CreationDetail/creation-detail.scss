@@ -1,0 +1,59 @@
+@import 'styles/settings';
+
+.creation-detail-box {
+    color: $black;
+    display: inline-block;
+    background: $white;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: $box-shadow-sm;
+    height: 100%;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 25px 10px;
+
+        @include breakpoint(medium) {
+            padding: 50px 25px 35px 25px;
+        }
+
+        .icon-container {
+            color: $primary;
+            margin-bottom: 24px;
+
+            @include breakpoint(medium) {
+                margin-bottom: 38px;
+
+            }
+
+            .icon {
+                font-size: 36px;
+
+                @include breakpoint(large) {
+                    font-size: 56px;
+                }
+            }
+        }
+
+        .title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .label {
+            margin-top: 10px;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+    }
+}

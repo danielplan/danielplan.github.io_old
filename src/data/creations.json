@@ -1,0 +1,50 @@
+{
+    "creations": [{
+            "general": {
+                "name": "ryoko",
+                "description": "ryoko is a project management tool, designed for developers or other small- to medium sized teams to plan their tasks effectively.",
+                "thumbnail": "ryoko.jpg",
+                "tags": [
+                    3, 2
+                ]
+            },
+            "details": {
+                "heading": "A bit of history",
+                "description": "This web application initially started as a university project. It was built using modern web technologies and completely designed by ourselves.",
+                "boxes": [{
+                    "icon": "robot",
+                    "title": "Technologies",
+                    "label": "It was built using React, NodeJS, SCSS and PostgreSQL"
+                }, {
+                    "icon": "github",
+                    "title": "Source Code",
+                    "label": "All the source code is available on Github.",
+                    "link": "https://github.com/rolandbernard/ryoko"
+                }]
+            },
+            "previews": {
+                "style": "phone_mockups",
+                "images": [
+                    "ryoko/tasks.jpg", "ryoko/Projects.jpg", "ryoko/teams.jpg"
+                ]
+            }
+        },
+        {
+            "general": {
+                "name": "DLS",
+                "description": "Data Logging Solutions (short DLS) is a service to track statistics for soapbox drivers, for which I created a simple yet effective User Interface.",
+                "thumbnail": "data-logging-solutions.jpg",
+                "slug": "data-logging-solutions",
+                "tags": [
+                    3
+                ]
+            },
+            "previews": {
+                "style": "phone_mockups",
+                "images":[
+                    "dls/carts.jpg", "dls/cart.jpg", "dls/race.jpg"
+                ]
+            }
+        }
+    ]
+}

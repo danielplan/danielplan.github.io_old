@@ -1,0 +1,10 @@
+@import 'styles/settings';
+
+.preview-section {
+    &.default-previews {
+        .light-box-container {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import 'styles/settings.scss';
+
+.heading-container {
+    margin-bottom: 30px;
+
+    &.small {
+        margin-bottom: 5px;
+    }
+
+    &.tiny {
+        margin-bottom: 5px;
+    }
+
+
+}

@@ -7,7 +7,7 @@ import './creations-detail.scss';
 import HeadSection from './sections/HeadSection';
 import DetailSection from './sections/DetailSection';
 import PreviewSection from './sections/PreviewSection';
-
+import { Helmet } from 'react-helmet';
 
 interface Params {
     slug: string;
@@ -24,6 +24,10 @@ export default function Detail() {
     if (creation) {
         return (
             <Page className="creations-detail-page">
+                <Helmet>
+                    <title>{creation.general.name} | daniel plan</title>
+                    <meta name="description" content={creation.general.description} />
+                </Helmet>
                 <HeadSection creation={creation} />
                 <DetailSection creation={creation} />
                 <PreviewSection creation={creation} />

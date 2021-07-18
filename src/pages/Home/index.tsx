@@ -5,11 +5,16 @@ import Heading from 'components/ui/Heading';
 import CreationLarge from 'components/ui/CreationLarge';
 import useCreations from 'data/CreationsContext';
 import Button from 'components/ui/Button';
+import { Helmet } from 'react-helmet';
 
 export default function Home(): JSX.Element {
     const allCreations = useCreations();
     return (
         <Page className="home-page" withoutMargin>
+            <Helmet>
+                <title>Hey I'm daniel plan</title>
+                <meta name="description" content="I’m a 20 year old computer science student focused on web development, design and photography." />
+            </Helmet>
             <section className="intro-section content-container">
                 <div className="inner">
                     <Logo />

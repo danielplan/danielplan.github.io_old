@@ -7,6 +7,7 @@ import CreationComponent from 'components/ui/Creation';
 import useCreations from 'data/CreationsContext';
 import { Creation, Tag } from 'data/common';
 import Heading from 'components/ui/Heading';
+import { Helmet } from 'react-helmet';
 
 export default function Creations(): JSX.Element {
     const [searchTerm, setSearchTerm] = useState<string>('');
@@ -32,6 +33,10 @@ export default function Creations(): JSX.Element {
 
     return (
         <Page className="creations-page">
+            <Helmet>
+                <title>Creations | daniel plan</title>
+                <meta name="description" content="Here you can see all of the projects I have been working on. By clicking on one of them you can find out more about it." />
+            </Helmet>
             <div className="content-container">
                 <section className="heading-section">
                     <div className="row">
@@ -57,7 +62,7 @@ export default function Creations(): JSX.Element {
                         <div className="column large-6">
                             <Heading heading="Let's have a look" size="small" />
                             <p>
-                                Down below you can find a list of all of my creations. Here you can filter 
+                                Down below you can find a list of all of my creations. Here you can filter
                                 them by tags or search for a specific creation by its name.
                             </p>
                             <div className="filter-container">

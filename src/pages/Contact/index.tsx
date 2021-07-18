@@ -1,9 +1,14 @@
 import './contact.scss';
 import Page from 'components/layout/Page';
 import ContactBox from 'components/ui/ContactBox';
+import { Helmet } from 'react-helmet';
 
 export default function About(): JSX.Element {
     return <Page className="about-page">
+        <Helmet>
+            <title>Contact me | daniel plan</title>
+            <meta name="description" content="Do you have any questions or are you interested in a collaboration? Here are some platforms where you can contact me directly." />
+        </Helmet>
         <section className="intro-section">
             <div className="content-container">
                 <div className="row center text-center">

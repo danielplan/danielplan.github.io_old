@@ -41,8 +41,34 @@
             },
             "previews": {
                 "style": "phone_mockups",
-                "images":[
+                "images": [
                     "dls/carts.jpg", "dls/cart.jpg", "dls/race.jpg"
+                ]
+            }
+        },
+        {
+            "general": {
+                "name": "hazy days",
+                "description": "This one is for all the hazy days, for all the days that seem to have no hope, yet where sunshine is waiting behind the clouds.",
+                "thumbnail": "hazy-days.jpg",
+                "slug": "hazy-days",
+                "tags": [
+                    1
+                ]
+            },
+            "details": {
+                "heading": "A quite random collection",
+                "description": "In this collection I will be adding all photos with hazy feeling.",
+                "boxes": [{
+                    "icon": "camera",
+                    "title": "Camera",
+                    "label": "Canon EOS 750D"
+                }]
+            },
+            "previews": {
+                "style": "default",
+                "images": [
+                    "hazy-days/1.jpg", "hazy-days/2.jpg", "hazy-days/3.jpg", "hazy-days/4.jpg", "hazy-days/5.jpg", "hazy-days/6.jpg", "hazy-days/7.jpg", "hazy-days/8.jpg", "hazy-days/9.jpg"
                 ]
             }
         }

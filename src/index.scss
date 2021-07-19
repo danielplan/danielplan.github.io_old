@@ -124,7 +124,7 @@ $i in $breakpoints {
     line-height: 1.4;
 
     &.tiny {
-        font-size: 20px;
+        font-size: 22px;
 
         @include breakpoint(medium) {
             font-size: 28px;
@@ -132,7 +132,7 @@ $i in $breakpoints {
     }
 
     &.small {
-        font-size: 22px;
+        font-size: 24px;
 
         @include breakpoint(medium) {
             font-size: 36px;
@@ -141,7 +141,7 @@ $i in $breakpoints {
 
 
     &.large {
-        font-size: 24px;
+        font-size: 28px;
 
         @include breakpoint(medium) {
             font-size: 36px;

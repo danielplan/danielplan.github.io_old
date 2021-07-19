@@ -14,11 +14,21 @@
     .tag-container {
         display: flex;
         flex-wrap: wrap;
-        margin: -10px;
-        margin-bottom: 0;
+        margin: -5px;
+        margin-bottom: 5px;
+
+        @include breakpoint(medium) {
+            margin: -10px;
+            margin-bottom: 5px;
+        }
 
         .tag {
-            margin: 10px;
+            margin: 5px;
+
+            @include breakpoint(medium) {
+                margin: 10px;
+
+            }
         }
     }
 
@@ -45,7 +55,7 @@
         }
     }
 
-   @include breakpoint(large) {
+    @include breakpoint(large) {
         .order-large-3 {
             &+* .creation-content {
                 &:before {
@@ -66,7 +76,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        padding: 30px;
+        padding: 20px;
 
         @include breakpoint(medium) {
             padding: 75px 0;

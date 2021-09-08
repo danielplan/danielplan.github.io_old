@@ -1,6 +1,36 @@
 {
     "creations": [{
             "general": {
+                "name": "wastend",
+                "description": "wastend is a mobile app for android and iOS, created to keep track of groceries and other consumable goods at home.",
+                "thumbnail": "wastend.jpg",
+                "tags": [
+                    3, 2
+                ]
+            },
+            "details": {
+                "heading": "Why I created wastend",
+                "description": "This is my first full-fledged flutter application and I wanted it to have a purpose and maybe even be useful for me.",
+                "boxes": [{
+                    "icon": "robot",
+                    "title": "Technologies",
+                    "label": "It was built using Flutter and NestJS."
+                }, {
+                    "icon": "github",
+                    "title": "Source Code",
+                    "label": "The whole source code is available on Github.",
+                    "link": "https://github.com/danielplan/wastend"
+                }]
+            },
+            "previews": {
+                "style": "phone_mockups",
+                "images": [
+                    "wastend/1.jpg", "wastend/2.jpg", "wastend/3.jpg"
+                ]
+            }
+        },
+        {
+            "general": {
                 "name": "ryoko",
                 "description": "ryoko is a project management tool, designed for developers or other small- to medium sized teams to plan their tasks effectively.",
                 "thumbnail": "ryoko.jpg",
@@ -18,7 +48,7 @@
                 }, {
                     "icon": "github",
                     "title": "Source Code",
-                    "label": "All the source code is available on Github.",
+                    "label": "The whole source code is available on Github.",
                     "link": "https://github.com/rolandbernard/ryoko"
                 }]
             },

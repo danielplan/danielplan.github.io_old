@@ -1,6 +1,35 @@
 {
     "creations": [{
             "general": {
+                "name": "Hikari",
+                "description": "Hikari 「光」 is a basic color grading tool, completely built to run in a web browser. It can perform basic color manipulation on image files.",
+                "thumbnail": "hikari.png",
+                "tags": [
+                    2
+                ]
+            },
+            "details": {
+                "heading": "The light",
+                "description": "Hikari 「光」, japanese for \"light\", was built for simple and instant image manipulation on the web.",
+                "boxes": [{
+                    "icon": "robot",
+                    "title": "Technologies",
+                    "label": "Image rendering is built in C and performed on the web using WebAssembly within a webworker."
+                }, {
+                    "icon": "github",
+                    "title": "Source Code",
+                    "label": "The whole source code is available on Github.",
+                    "link": "https://github.com/danielplan/hikari/"
+                }, {
+                    "icon": "window",
+                    "title": "Live version",
+                    "label": "Play around with it. It's completely free and available online.",
+                    "link": "https://danielplan.github.io/hikari/"
+                }]
+            }
+        },
+        {
+            "general": {
                 "name": "wastend",
                 "description": "wastend is a mobile app for android and iOS, created to keep track of groceries and other consumable goods at home.",
                 "thumbnail": "wastend.jpg",

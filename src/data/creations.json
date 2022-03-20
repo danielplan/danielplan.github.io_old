@@ -2,6 +2,7 @@
     "creations": [{
             "general": {
                 "name": "Hikari",
+                "slug": "hikari",
                 "description": "Hikari 「光」 is a basic color grading tool, completely built to run in a web browser. It can perform basic color manipulation on image files.",
                 "thumbnail": "hikari.png",
                 "tags": [
